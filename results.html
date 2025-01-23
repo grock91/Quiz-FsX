@@ -45,13 +45,6 @@
         button:hover {
             background: #c0392b;
         }
-        .celebrity-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 20px auto;
-            display: block;
-        }
     </style>
 </head>
 <body>
@@ -62,32 +55,22 @@
     </div>
 
     <script>
-        // Personality types, descriptions, and celebrity images
+        // Personality types and descriptions
         const personalityTypes = {
             "Leader": {
-                description: "You’re a natural-born leader who inspires others with your confidence and determination. 🏆",
-                celebrity: "Shah Rukh Khan",
-                image: "https://via.placeholder.com/150?text=Shah+Rukh+Khan"
+                description: "You’re a natural-born leader who inspires others with your confidence and determination. 🏆"
             },
             "Adventurer": {
-                description: "You’re bold, curious, and always up for a new adventure. 🌍",
-                celebrity: "Bear Grylls",
-                image: "https://via.placeholder.com/150?text=Bear+Grylls"
+                description: "You’re bold, curious, and always up for a new adventure. 🌍"
             },
             "Creative": {
-                description: "You’re imaginative, artistic, and love expressing yourself. 🎨",
-                celebrity: "A.R. Rahman",
-                image: "https://via.placeholder.com/150?text=A.R.+Rahman"
+                description: "You’re imaginative, artistic, and love expressing yourself. 🎨"
             },
             "Caregiver": {
-                description: "You’re kind, nurturing, and always there for others. ❤️",
-                celebrity: "Mother Teresa",
-                image: "https://via.placeholder.com/150?text=Mother+Teresa"
+                description: "You’re kind, nurturing, and always there for others. ❤️"
             },
             "Thinker": {
-                description: "You’re analytical, logical, and love solving problems. 🧠",
-                celebrity: "Elon Musk",
-                image: "https://via.placeholder.com/150?text=Elon+Musk"
+                description: "You’re analytical, logical, and love solving problems. 🧠"
             }
         };
 
@@ -109,12 +92,6 @@
             const h2 = document.createElement("h2");
             h2.textContent = `${personality} - ${names.join(", ")}`;
             resultsDiv.appendChild(h2);
-
-            const img = document.createElement("img");
-            img.src = personalityTypes[personality].image;
-            img.alt = personalityTypes[personality].celebrity;
-            img.className = "celebrity-img";
-            resultsDiv.appendChild(img);
 
             const p = document.createElement("p");
             p.textContent = personalityTypes[personality].description;
